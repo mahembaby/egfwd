@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Manipulating the DOM</title>
+  <!-- Load Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Fira+Sans:900|Merriweather&display=swap" rel="stylesheet">  <!-- Load Styles -->
+  <link href="css/styles.css" rel="stylesheet">
+</head>
+<body>
+  <!-- HTML Follows BEM naming conventions 
+  IDs are only used for sections to connect menu achors to sections -->
+  <header class="page__header">
+    <nav class="navbar__menu">
+      <!-- Navigation starts as empty UL that will be populated with JS -->
+      <ul id="navbar__list"></ul>
+    </nav>
+  </header>
+  <main>
+    <header class="main__hero">
+      <h1>The Seven Wonders</h1>
+      <h3 class="wikipedia">Reference <a href="https://en.wikipedia.org/wiki/New7Wonders_of_the_World">Wikipedia!</a></h3>
+    </header>
+    <!-- Each Section has an ID (used for the anchor) and 
+    a data attribute that will populate the li node.
+    Adding more sections will automatically populate nav.
+    The first section is set to active class by default -->
+    <section id="section1" data-nav="First" class="your-active-class">
+      <div class="landing__container">
+        <h2>Great Pyramid of Giza</h2>
+        <p>The Great Pyramid of Giza (also known as the Pyramid of Khufu or the Pyramid of Cheops) is the oldest and largest of the three pyramids in the Giza pyramid complex bordering present-day Giza in Greater Cairo, Egypt. It is the oldest of the Seven Wonders of the Ancient World, and the only one to remain largely intact.</p>
+        <p>Egyptologists believe that the pyramid was built as a tomb for the Fourth Dynasty Egyptian pharaoh Khufu over a 20-year period concluding around 2560 BC. Initially standing at 146.5 metres (481 feet), the Great Pyramid was the tallest man-made structure in the world for more than 3,800 years. It is estimated to weigh approximately 6 million tonnes, and consists of 2.3 million blocks of limestone and granite, some weighing as much as 80 tonnes. It was originally covered by limestone casing stones that formed a smooth outer surface; what is seen today is the underlying core structure, although a few casing stones can still be seen at the base. It was built by extracting huge stones from a quarry and lifting them into place, but there are varying scientific and alternative theories about the exact construction technique.</p>
+      </div>
+    </section>
+    <section id="section2" data-nav="Second">
+      <div class="landing__container">
+        <h2>Great Wall of China</h2>
+        <p>The Great Wall of China (traditional Chinese: 萬里長城; simplified Chinese: 万里长城; pinyin: Wànlǐ Chángchéng) is a series of fortifications that were built across the historical northern borders of ancient Chinese states and Imperial China as protection against various nomadic groups from the Eurasian Steppe. Several walls were built from as early as the 7th century BC,[2] with selective stretches later joined together by Qin Shi Huang (220–206 BC), the first emperor of China. Little of the Qin wall remains.[3] Later on, many successive dynasties have built and maintained multiple stretches of border walls. The most well-known sections of the wall were built by the Ming dynasty (1368–1644).        </p>
+        <p>Apart from defense, other purposes of the Great Wall have included border controls, allowing the imposition of duties on goods transported along the Silk Road, regulation or encouragement of trade and the control of immigration and emigration.[4] Furthermore, the defensive characteristics of the Great Wall were enhanced by the construction of watchtowers, troop barracks, garrison stations, signaling capabilities through the means of smoke or fire, and the fact that the path of the Great Wall also served as a transportation corridor.        </p>
+      </div>
+    </section>
+    <section id="section3" data-nav="Third">
+      <div class="landing__container">
+        <h2>Petra</h2>
+        <p>Petra (Arabic: ٱلْبَتْرَاء‎, romanized: Al-Batrāʾ; Ancient Greek: Πέτρα, "Rock"), originally known to its inhabitants in as Raqmu or Raqēmō (𐢚𐢛𐢓𐢈),[3][4] is a historic and archaeological city in southern Jordan. Petra lies around Jabal Al-Madbah in a basin surrounded by mountains which form the eastern flank of the Arabah valley that runs from the Dead Sea to the Gulf of Aqaba.[5] The area around Petra has been inhabited from as early as 7000 BC,[6] and the Nabataeans might have settled in what would become the capital city of their kingdom, as early as the 4th century BC.[7] However, archaeological work has only discovered evidence of Nabataean presence dating back to the second century BC,[8] by which time Petra had become their capital.[6] The Nabataeans were nomadic Arabs who invested in Petra's proximity to the trade routes by establishing it as a major regional trading hub.[6][9]        </p>
+        <p>The trading business gained the Nabataeans considerable revenue and Petra became the focus of their wealth. The Nabataeans were accustomed to living in the barren deserts, unlike their enemies, and were able to repel attacks by taking advantage of the area's mountainous terrain. They were particularly skillful in harvesting rainwater, agriculture and stone carving. Petra flourished in the 1st century AD, when its famous Al-Khazneh structure – believed to be the mausoleum of Nabataean king Aretas IV – was constructed, and its population peaked at an estimated 20,000 inhabitants.[10]        </p>
+      </div>
+    </section>
+    <section id="section4" data-nav="Fourth">
+      <div class="landing__container">
+        <h2>Colosseum</h2>
+        <p>The Colosseum (/ˌkɒləˈsiːəm/ KOL-ə-SEE-əm; Italian: Colosseo [kolosˈsɛːo]), is an oval amphitheatre in the centre of the city of Rome, Italy, just east of the Roman Forum and is the largest ancient amphitheatre ever built, and is still the largest standing amphitheater in the world today, despite its age. Construction began under the emperor Vespasian (r. 69–79 AD) in 72[1] and was completed in AD 80 under his successor and heir, Titus (r. 79–81).[2] Further modifications were made during the reign of Domitian (r. 81–96).[3] The three emperors that were patrons of the work are known as the Flavian dynasty, and the amphitheatre was named the Flavian Amphitheatre (Latin: Amphitheatrum Flavium; Italian: Anfiteatro Flavio [aɱfiteˈaːtro ˈflaːvjo]) by later classicists and archaeologists for its association with their family name (Flavius).        </p>
+        <p>The Colosseum is built of travertine limestone, tuff (volcanic rock), and brick-faced concrete.[4] The Colosseum could hold an estimated 50,000 to 80,000 spectators at various points of its history over the centuries,[5][6] having an average audience of some 65,000;[7][8] it was used for gladiatorial contests and public spectacles such as mock sea battles (for only a short time as the hypogeum was soon filled in with mechanisms to support the other activities), animal hunts, executions, re-enactments of famous battles, and dramas based on Roman mythology. The building ceased to be used for entertainment in the early medieval era. It was later reused for such purposes as housing, workshops, quarters for a religious order, a fortress, a quarry, and a Christian shrine.[citation needed]        </p>
+      </div>
+    </section>
+    <section id="section5" data-nav="Fifth">
+      <div class="landing__container">
+        <h2>Chichen Itza</h2>
+        <p>Chichen Itza[nb 1] was a large pre-Columbian city built by the Maya people of the Terminal Classic period. The archaeological site is located in Tinúm Municipality, Yucatán State, Mexico.[1]        </p>
+        <p>Chichen Itza was a major focal point in the Northern Maya Lowlands from the Late Classic (c. AD 600–900) through the Terminal Classic (c. AD 800–900) and into the early portion of the Postclassic period (c. AD 900–1200). The site exhibits a multitude of architectural styles, reminiscent of styles seen in central Mexico and of the Puuc and Chenes styles of the Northern Maya lowlands. The presence of central Mexican styles was once thought to have been representative of direct migration or even conquest from central Mexico, but most contemporary interpretations view the presence of these non-Maya styles more as the result of cultural diffusion.        </p>
+        <p>Chichen Itza was one of the largest Maya cities and it was likely to have been one of the mythical great cities, or Tollans, referred to in later Mesoamerican literature.[2] The city may have had the most diverse population in the Maya world, a factor that could have contributed to the variety of architectural styles at the site.[3]        </p>
+      </div>
+    </section>
+    <section id="section6" data-nav="Sixth">
+      <div class="landing__container">
+        <h2>Machu Picchu</h2>
+        <p>Machu Picchu is a 15th-century Inca citadel, located in the Eastern Cordillera of southern Peru, on a 2,430-metre (7,970 ft) mountain ridge.[2][3] It is located in the Machupicchu District within Urubamba Province[4] above the Sacred Valley, which is 80 kilometres (50 mi) northwest of Cuzco. The Urubamba River flows past it, cutting through the Cordillera and creating a canyon with a tropical mountain climate.[5]</p>
+        <p>For most speakers of English or Spanish, the first 'c' in Picchu is silent. In English, the name is pronounced /ˌmɑːtʃuː piːtʃuː/[6][7] or /ˌmɑːtʃuː piːktʃuː/,[7][8] in Spanish as [ˈmatʃu ˈpitʃu] or [ˈmatʃu ˈpiktʃu],[9] and in Quechua (Machu Pikchu)[10] as [ˈmatʃʊ ˈpɪktʃʊ].</p>
+        <p>Most archaeologists believe that Machu Picchu was constructed as an estate for the Inca emperor Pachacuti (1438–1472). Often mistakenly referred to as the "Lost City of the Incas", it is the most familiar icon of Inca civilization. The Incas built the estate around 1450 but abandoned it a century later at the time of the Spanish conquest. Although known locally, it was not known to the Spanish during the colonial period and remained unknown to the outside world until American historian Hiram Bingham brought it to international attention in 1911.</p>
+      </div>
+    </section>
+    <section id="section7" data-nav="Seventh">
+      <div class="landing__container">
+        <h2>Taj Mahal</h2>
+        <p>The Taj Mahal (/ˌtɑːdʒ məˈhɑːl, ˌtɑːʒ-/;[4] lit. 'Crown of the Palace', [taːdʒ ˈmɛːɦ(ə)l])[5] is an ivory-white marble mausoleum on the southern bank of the river Yamuna in the Indian city of Agra. It was commissioned in 1632 by the Mughal emperor Shah Jahan (reigned from 1628 to 1658) to house the tomb of his favourite wife, Mumtaz Mahal; it also houses the tomb of Shah Jahan himself. The tomb is the centrepiece of a 17-hectare (42-acre) complex, which includes a mosque and a guest house, and is set in formal gardens bounded on three sides by a crenellated wall.</p>
+        <p>Construction of the mausoleum was essentially completed in 1643, but work continued on other phases of the project for another 10 years. The Taj Mahal complex is believed to have been completed in its entirety in 1653 at a cost estimated at the time to be around 32 million rupees, which in 2020 would be approximately 70 billion rupees (about U.S. $956 million). The construction project employed some 20,000 artisans under the guidance of a board of architects led by the court architect to the emperor, Ustad Ahmad Lahauri.</p>
+      </div>
+    </section>
+    <section id="section8" data-nav="Eigth">
+      <div class="landing__container">
+        <h2>Christ The Redeemer</h2>
+        <p>Christ the Redeemer (Portuguese: Cristo Redentor, standard Brazilian Portuguese: [ˈkɾistu ʁedẽˈtoʁ], local pronunciation: [ˈkɾiɕtŭ̥ xe̞dẽˈtoɦ]) is an Art Deco statue of Jesus Christ in Rio De Janeiro, Brazil, created by Polish-French sculptor Paul Landowski and built by Brazilian engineer Heitor da Silva Costa, in collaboration with French engineer Albert Caquot. Romanian sculptor Gheorghe Leonida fashioned the face. Constructed between 1922 and 1931, the statue is 30 metres (98 ft) high, excluding its 8-metre (26 ft) pedestal. The arms stretch 28 metres (92 ft) wide.[1][2]</p>
+        <p>The statue weighs 635 metric tons (625 long, 700 short tons), and is located at the peak of the 700-metre (2,300 ft) Corcovado mountain in the Tijuca Forest National Park overlooking the city of Rio de Janeiro. A symbol of Christianity across the world, the statue has also become a cultural icon of both Rio de Janeiro and Brazil, and is listed as one of the New Seven Wonders of the World.[3] It is made of reinforced concrete and soapstone.[4][5][6]</p>
+      </div>
+    </section>
+  </main>
+  <footer class="page__footer">
+    <div class="goTop"><a href=#section1>Scroll To Top</a></div>
+    <p>&copy Udacity</p>
+  </footer>
+
+  <script language="javascript" src="js/app.js"></script>
+</body>
+</html>
