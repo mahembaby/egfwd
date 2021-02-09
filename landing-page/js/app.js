@@ -19,6 +19,7 @@
 */
 const sections = document.querySelectorAll("section");
 const items = document.querySelectorAll("li");
+const navBar = document.querySelector(".navbar__menu");
 /**
  * End Global Variables
  * Start Helper Functions
@@ -36,21 +37,22 @@ const items = document.querySelectorAll("li");
 // build the nav
 
 function createNav() {
-    const navBar = document.querySelector(".navbar__menu");
     const navList = document.createElement("ul");
     
     for (section of sections) {
         const navTitle = document.createElement("li");
-        const linkToSection = document.createElement("a");
         const text = section.getAttribute("data-nav");
         const sectionId = section.getAttribute("id");
 
         navTitle.textContent = text;
         navTitle.classList = "menu__link " + sectionId;
-        linkToSection.setAttribute("href", "#" + sectionId);
 
-        linkToSection.appendChild(navTitle); //Put the navTitles to <a>---</a>
-        navList.appendChild(linkToSection); //Put <a> </a> to <ul>---</ul>
+        // Listen to clicks to scroll to correct section.
+        navTitle.addEventListener("click", function(event){
+        event.preventDefault();
+        goToSection(sectionId)});
+
+        navList.appendChild(navTitle); //Put <a> </a> to <ul>---</ul>
     }
     navBar.appendChild(navList);
 }
@@ -79,11 +81,27 @@ function setActiveSection(sectionID) {
     };
 };
 
-// Scroll to anchor ID using scrollTO event
-
-window.addEventListener('scroll', function(event) {
+window.addEventListener('scroll', function() {
     scrolling();
   });
+
+// Scroll to anchor ID using scrollTO event
+
+function goToSection(sectionTo){
+    for (section of sections){
+        if (sectionTo == section.getAttribute("id")){
+            window.scrollTo(0, section.offsetTop);
+        };
+    };
+    
+};
+
+let buttonUp = document.querySelector(".goTop");
+buttonUp.addEventListener("click", function(){
+    scrollTo(0, 0);
+})
+
+// if ((scrollPos >= section.offsetTop) && (scrollPos < section.offsetTop + section.offsetHeight)) {
 
 /**
  * End Main Functions

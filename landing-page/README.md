@@ -1,16 +1,28 @@
-# Landing Page Project
+# Project Title
 
-This is my first project using javascript, CSS and HTML all together.
-It is to be submitted to Udacity reviewers before 21st of Feb.
+Landing page with dynamic navigation bar and sections.
 
-In this project, I was asked to create a dynamic navigation bar that adds links dynamically as per sections
-created in the DOM body.
+## Getting Started
 
-In addition to that, I had to make the active section dynamically change with scrolling according to current
-scroll position to add effects to it.
+To run this project, you need a server or localhost. Once uploaded the files, open the index.html file
+and project will start as a new page in your browser.
 
-Last, I had to make the navigation bar links trigger the user to desired section when clicking on it.
+### Prerequisites
 
-After completing the project, I tested the code speed and optimized it to be faster.
+Computer or mobile phone, web browser and local host.
 
-I depended on what I learnt throughout the course in Udacity.
+## Built With
+
+- [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML) - Used to create the elements.
+- [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS) - Used to style the elements
+- [JAVASCRIPT](https://developer.mozilla.org/en-US/docs/Web/JAVASCRIPT) - Used to make the page dynamic.
+
+## Authors
+
+- **Udacity** - _Initial work_ (https://github.com/udacity/fend/tree/refresh-2019/projects/landing-page)
+
+- **Mahmoud Embaby** - _Improvements & JS_ (https://github.com/membaby)
+
+## License
+
+This project is free to use.
